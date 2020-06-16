@@ -7,7 +7,6 @@ export default function HeroBio({ bio, name }) {
 				<StatContainer align="left" stack>
 					<StatRow stat="Full name:" value={bio['full-name']} />
 					<StatRow stat="Birthplace:" value={bio['place-of-birth']} />
-					<StatRow stat="1st Appearance:" value={bio['first-appearance']} />
 				</StatContainer>
 			</>
 	)

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const StatContainer = styled.div`
 	width: 100%;
 	display: ${props => props.multi ? 'flex' : 'block'};
+	margin-top: ${props => props.multi ? '20px' : '0'};
 	
 	div {
 		flex-direction: ${props => props.stack ? 'column' : 'none'};
@@ -10,26 +11,33 @@ export const StatContainer = styled.div`
 	
 		span {
 			text-align: ${props => props.align === 'left' ? 'left' : 'center'};
-			flex-basis: ${props => props.stack ? 'none' : '100%'};
 		}
 	}
 `
 
 export const Stat = styled.div`
 	display: flex;
-	align-items: ${props => props.icon ? 'center' : 'left'};
-	padding: 5px 0;
+	padding: ${props => props.icon ? '0' : '5px 0'};
 	font-size: 13px;
+	width: 100%;
+	background: ${props => props.icon ? 'rgba(255,255,255,0.5)' : 'none'};
+	margin: ${props => props.icon ? '5px 0' : '0'};
+	border-radius: 35px;
 	
-	span {
+	> span {
 		display: ${props => props.icon ? 'flex' : 'block'};
+		flex: 1;
 		padding: ${props => props.icon ? '5px' : '0'};
 		align-items: center;
-		justify-content: center;
 	}
 	
-	span:first-child {
+	> span:first-child {
 		font-weight: bold;
+		padding-left: ${props => props.icon ? '20px' : '0'};
+	}
+	
+	> span:last-child {
+		justify-content: flex-end;
 	}
 `
 
@@ -37,14 +45,14 @@ export const StatImage = styled.img`
 	height: 40px;
 `
 
-export const Value = styled.span`
+export const Value = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 17px;
 	border: 2px solid;
-	height: 35px;
-	width: 35px;
+	height: 40px;
+	width: 40px;
 	color: ${props => props.valueColour};
 	border-radius: 25px;
 `

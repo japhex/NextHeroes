@@ -6,7 +6,7 @@ export default function StatRow({ value}) {
 	if (value < 30) {
 		valueColour = '#C60404'
 	} else if (value < 70) {
-		valueColour = '#FFD300'
+		valueColour = '#FF8B00'
 	}
 
 	return (

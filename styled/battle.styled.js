@@ -21,8 +21,8 @@ export const HeroBox = styled.div`
 	border-radius: 5px 5px 15px 15px; 
 	min-height: 60vh;
 	width: 30vw;
-	background-color: #ffffff;
-	background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");
+		background-color: #FFD300;
+		background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 	box-shadow: -1px 0px 15px -6px rgba(0,0,0,0.75);
 `
 
@@ -31,8 +31,7 @@ export const Details = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 50%;
-	padding: 20px;
+	padding: ${props => props.withPadding ? '20px' : ''};
 `
 
 export const HeroName = styled.h1`

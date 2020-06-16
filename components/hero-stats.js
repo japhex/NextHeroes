@@ -1,9 +1,9 @@
 import StatRow from "./stat-row"
 import { StatContainer, StatImage } from 'styled/stat-row.styled'
-import {Details} from "../styled/battle.styled"
+import { Details } from "../styled/battle.styled"
 
 export default function HeroStats({ stats }) {
-	const {combat, durability, intelligence, power, speed, strength} = stats
+	const { combat, durability, intelligence, power, speed, strength } = stats
 
 	return (
 		<StatContainer multi>

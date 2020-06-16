@@ -9,12 +9,12 @@ export default function HeroCard({ chosenHero }) {
 	const { hero: { name, image, powerstats, biography, appearance, work: { occupation }} } = chosenHero
 	return (
 		<>
-			<Details>
+			<Details withPadding>
 				<HeroName>{name}</HeroName>
 				<HeroImage name={name} image={image} />
 				<HeroStats stats={powerstats} />
 			</Details>
-			<Details>
+			<Details withPadding>
 				<HeroBio bio={biography} name={name} />
 				<HeroAppearance appearance={appearance} />
 				<HeroOccupation occupation={occupation} />

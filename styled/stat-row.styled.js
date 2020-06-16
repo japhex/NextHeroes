@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const StatContainer = styled.div`
 	width: 100%;
-	padding: 10px;
 	display: ${props => props.multi ? 'flex' : 'block'};
 	
 	div {
 		flex-direction: ${props => props.stack ? 'column' : 'none'};
+		margin-bottom: ${props => props.stack ? '10px' : '0'};
 	
 		span {
 			text-align: ${props => props.align === 'left' ? 'left' : 'center'};

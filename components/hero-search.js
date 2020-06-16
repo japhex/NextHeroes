@@ -39,10 +39,8 @@ export default function HeroSearch({ hero }) {
 	}
 
 	return (
-		<>
-			<SearchContainer>
-				<Search autoFocus onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search hero..." />
-			</SearchContainer>
+		<SearchContainer>
+			<Search autoFocus onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search hero..." />
 
 			{error.length > 0 &&
 				<p>{error}</p>
@@ -60,6 +58,6 @@ export default function HeroSearch({ hero }) {
 					)}
 				</Results>
 			}
-		</>
+		</SearchContainer>
 	)
 }

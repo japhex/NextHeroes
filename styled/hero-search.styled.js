@@ -4,8 +4,6 @@ export const Results = styled.ul`
 	display: block;
 	height: 100%;
 	overflow-x: auto;
-	padding: 10px;
-	margin-bottom: 20px;
 	box-sizing: border-box;
 	width: 100%;
 	
@@ -25,11 +23,13 @@ export const Results = styled.ul`
 `
 
 export const SearchContainer = styled.div`
-	
+	display: flex;
+	flex-direction: column;
+	padding:15px 0;
+	max-height: 40vh;
 `
 
 export const Search = styled.input`
 	font-size: 20px;
 	padding: 5px;
-	margin-left: 20px;
 `

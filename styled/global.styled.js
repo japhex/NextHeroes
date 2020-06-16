@@ -9,4 +9,9 @@ export const GlobalStyles = createGlobalStyle`
 		background-color: #c9c9c9;
 		background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
 	}
+	
+	ul {
+		margin: 0;
+		padding: 0;
+	}
 `

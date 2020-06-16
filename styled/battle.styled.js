@@ -19,7 +19,7 @@ export const HeroBox = styled.div`
 	justify-content: center;
 	align-items: center;
 	border-radius: 5px 5px 15px 15px; 
-	height: 60vh;
+	min-height: 60vh;
 	width: 30vw;
 	background-color: #ffffff;
 	background-image: url("https://www.transparenttextures.com/patterns/absurdity.png");

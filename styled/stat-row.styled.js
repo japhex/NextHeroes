@@ -11,7 +11,6 @@ export const StatContainer = styled.div`
 		span {
 			text-align: ${props => props.align === 'left' ? 'left' : 'center'};
 			flex-basis: ${props => props.stack ? 'none' : '100%'};
-			padding-bottom: ${props => props.stack ? '5px' : '0'};
 		}
 	}
 `
@@ -32,13 +31,20 @@ export const Stat = styled.div`
 	span:first-child {
 		font-weight: bold;
 	}
-	
-	span:last-child {
-		width: ${props => props.icon ? '32px' : 'auto'};
-		font-size: ${props => props.icon ? '20px' : '14px'};
-	}
 `
 
 export const StatImage = styled.img`
 	height: 40px;
+`
+
+export const Value = styled.span`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	border: 1px solid;
+	height: 35px;
+	width: 35px;
+	color: ${props => props.valueColour};
+	border-radius: 25px;
 `

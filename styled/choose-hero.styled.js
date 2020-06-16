@@ -6,7 +6,7 @@ export const Choose = styled.a`
 	justify-content: center;
 	font-size: 26px;
 	width: 60%;
-	height: 60%;
+	min-height: 30vh;
 	text-decoration: none;
 	border: 1px dashed #cecece;
 	border-radius: 10px;

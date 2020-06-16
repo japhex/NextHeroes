@@ -10,6 +10,8 @@ class MyApp extends App {
 			<HeroProvider>
 				<GlobalStyles />
 				<Helmet>
+					<title>NextHeroes</title>
+					<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
 					<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet" />
 				</Helmet>
 				<Component {...pageProps} />

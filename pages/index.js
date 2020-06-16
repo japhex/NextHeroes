@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
-export default function Home({ allPostsData }) {
+export default function Home() {
   return (
     <div className="container">
       <Head>
@@ -47,21 +47,6 @@ export default function Home({ allPostsData }) {
             </p>
           </a>
         </div>
-
-	      <section>
-		      <h2>Blog</h2>
-		      <ul>
-			      {allPostsData.map(({ id, date, title }) => (
-					      <li key={id}>
-						      {title}
-						      <br />
-						      {id}
-						      <br />
-						      {date}
-					      </li>
-			      ))}
-		      </ul>
-	      </section>
       </main>
 
       <footer>

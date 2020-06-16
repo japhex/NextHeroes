@@ -42,7 +42,7 @@ export const Value = styled.span`
 	align-items: center;
 	justify-content: center;
 	font-size: 17px;
-	border: 1px solid;
+	border: 2px solid;
 	height: 35px;
 	width: 35px;
 	color: ${props => props.valueColour};

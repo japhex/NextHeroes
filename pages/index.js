@@ -1,16 +1,17 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
-export default function Home() {
+export default function Home({ allPostsData }) {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>SpaceX DB</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+	        Read <Link href="/posts/first-post"><a>this page!</a></Link>
         </h1>
 
         <p className="description">
@@ -46,6 +47,21 @@ export default function Home() {
             </p>
           </a>
         </div>
+
+	      <section>
+		      <h2>Blog</h2>
+		      <ul>
+			      {allPostsData.map(({ id, date, title }) => (
+					      <li key={id}>
+						      {title}
+						      <br />
+						      {id}
+						      <br />
+						      {date}
+					      </li>
+			      ))}
+		      </ul>
+	      </section>
       </main>
 
       <footer>

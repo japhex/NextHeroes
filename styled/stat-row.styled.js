@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { colorYellow } from "./global.styled"
+import {colorBlue, colorRed, colorYellow} from "./global.styled"
 
 export const StatContainer = styled.div`
 	width: 100%;
@@ -98,5 +98,10 @@ export const Value = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	font-size: 17px;
+	font-size: 18px;
+	line-height: 16px;
+	font-weight: bold;
+	color: ${props => parseInt(props.value) === 100 ? colorRed : '#000'};
+	font-family: 'Kalam';
+	padding-top: 5px;
 `

@@ -5,7 +5,9 @@ export const ImageContainer = styled.div`
 `
 
 export const Image = styled.img`
-	display: none;
+	visibility: hidden;
+	height: 472px;
+	width: 354px;
 	max-width: 100%;
 	max-height: 100%;
 	z-index: 1;

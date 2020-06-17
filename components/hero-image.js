@@ -5,12 +5,12 @@ export default function HeroImage({ name, image }) {
 	const {url} = image
 
 	const handleImageLoad = (e) => {
-		e.target.style.display='block'
+		e.target.style.visibility='visible'
 	}
 
 	const handleImageError = (e) => {
 		e.target.onerror = null;
-		e.target.style.display='none'
+		e.target.style.visibility='hidden'
 	}
 
 	return (

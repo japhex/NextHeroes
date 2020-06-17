@@ -8,9 +8,12 @@ export const BattleContainer = styled.div`
 	height: 100vh;
 `
 
-export const BattleVs = styled.span`
-	display: block;
-	padding: 0 40px;
+export const BattleVsContainer = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	padding: 20px;
 	font-size: 50px;
 `
 

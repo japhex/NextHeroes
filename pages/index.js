@@ -2,13 +2,15 @@ import { useContext } from 'react'
 import isEmpty from 'lodash/isEmpty'
 import ChooseHero from 'components/choose-hero'
 import { HeroContext } from 'contexts/heroContext'
-import { BattleContainer, BattleVs, HeroBox } from 'styled/battle.styled'
+import { BattleContainer, BattleVsContainer, HeroBox } from 'styled/battle.styled'
 import HeroCard from "../components/hero-card"
+import BattleVs from "../components/battle-vs"
 
 export default function Battle() {
 	const { hero1, hero2 } = useContext(HeroContext)
 
 	return (
+		<>
 			<BattleContainer>
 				<HeroBox>
 					{!isEmpty(hero1) ?
@@ -19,9 +21,9 @@ export default function Battle() {
 							<ChooseHero hero={1} />
 					}
 				</HeroBox>
-				<BattleVs>
-					VS.
-				</BattleVs>
+				<BattleVsContainer>
+					<BattleVs />
+				</BattleVsContainer>
 				<HeroBox>
 					{!isEmpty(hero2) ?
 							<>
@@ -32,5 +34,6 @@ export default function Battle() {
 					}
 				</HeroBox>
 			</BattleContainer>
+		</>
 	)
 }

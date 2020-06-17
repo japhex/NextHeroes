@@ -20,7 +20,7 @@ export const HeroBox = styled.div`
 	width: 354px;
 	padding: 30px;
 	background-color: ${colorBrown};
-	background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 	box-shadow: -1px 0px 15px -6px rgba(0,0,0,0.75);
 `
 

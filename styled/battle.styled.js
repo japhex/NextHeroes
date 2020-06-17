@@ -18,6 +18,7 @@ export const BattleVsContainer = styled.div`
 `
 
 export const HeroBox = styled.div`
+	position: relative;
 	border-radius: 20px; 
 	height: 650px;
 	width: 354px;

@@ -15,14 +15,14 @@ const calculateAverage = (stats) => {
 }
 
 export const compareStats = (heroOne, heroTwo) => {
-	const heroOneAverage = calculateAverage(heroOne.hero.powerstats)
-	const heroTwoAverage = calculateAverage(heroTwo.hero.powerstats)
+	const heroOneAverage = calculateAverage(heroOne.powerstats)
+	const heroTwoAverage = calculateAverage(heroTwo.powerstats)
 	let winner = ''
 
 	if (heroOneAverage > heroTwoAverage) {
-		winner = heroOne.hero.name
+		winner = heroOne.name
 	} else if (heroTwoAverage > heroOneAverage) {
-		winner = heroTwo.hero.name
+		winner = heroTwo.name
 	} else {
 		winner = 'Draw!'
 	}

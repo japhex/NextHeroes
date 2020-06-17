@@ -15,7 +15,7 @@ export default function Battle() {
 				<HeroBox>
 					{!isEmpty(hero1) ?
 							<>
-								<HeroCard chosenHero={hero1} />
+								<HeroCard chosenHero={hero1} hero={1} />
 							</>
 							:
 							<ChooseHero hero={1} />
@@ -27,7 +27,7 @@ export default function Battle() {
 				<HeroBox opposite>
 					{!isEmpty(hero2) ?
 							<>
-								<HeroCard chosenHero={hero2} />
+								<HeroCard chosenHero={hero2} hero={2} />
 							</>
 							:
 							<ChooseHero hero={2} />

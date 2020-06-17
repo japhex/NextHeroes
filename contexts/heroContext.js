@@ -7,15 +7,15 @@ export const HeroProvider = ({ children }) => {
 	const [ hero2, setHero2 ] = useState({});
 
 	const storeHero1 = hero => {
-		setHero1({
+		setHero1(
 			hero
-		})
+		)
 	}
 
 	const storeHero2 = hero => {
-		setHero2({
+		setHero2(
 			hero
-		})
+		)
 	}
 
 	const contextProps = {

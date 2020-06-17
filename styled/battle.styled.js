@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colorBlue, colorBrown, colorYellow } from 'styled/global.styled'
 
 export const BattleContainer = styled.div`
 	display: flex;
@@ -10,19 +11,16 @@ export const BattleContainer = styled.div`
 export const BattleVs = styled.span`
 	display: block;
 	padding: 0 40px;
-	font-family: 'Metal Mania';
 	font-size: 50px;
 `
 
 export const HeroBox = styled.div`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 5px 5px 15px 15px; 
-	min-height: 60vh;
-	width: 30vw;
-		background-color: #FFD300;
-		background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+	border-radius: 20px; 
+	height: 78vh;
+	width: 354px;
+	padding: 30px;
+	background-color: ${colorBrown};
+	background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
 	box-shadow: -1px 0px 15px -6px rgba(0,0,0,0.75);
 `
 
@@ -36,5 +34,37 @@ export const Details = styled.div`
 `
 
 export const HeroName = styled.h1`
-	font-family: 'Metal Mania';
+	position: absolute;
+	bottom: 120px;
+	right: 10px;
+	z-index: 2;
+	background-color: ${colorYellow};
+	background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+	padding: 10px;
+	border: 2px solid;
+	font-family: 'comic_panelsregular';
+	text-transform: uppercase;
+	transform: rotate(-5deg);
+`
+
+export const CardSection = styled.div`
+	display: flex;
+	position: relative;
+	top: ${props => props.pullUp ? '-120px' : 0};
+	
+`
+
+export const StatsSectionLeft = styled.div`
+	width: 35%;
+	background-color: ${colorBlue};
+	padding: 10px;
+	border: 2px solid;
+	font-family: 'Kalam';
+	line-height: 12px;
+	background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+`
+
+export const StatsSectionRight = styled.div`
+	width: 65%;
+	font-family: 'Kalam';
 `

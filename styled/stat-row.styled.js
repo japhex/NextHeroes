@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colorYellow } from "./global.styled"
 
 export const StatContainer = styled.div`
 	width: 100%;
@@ -17,28 +18,76 @@ export const StatContainer = styled.div`
 
 export const Stat = styled.div`
 	display: flex;
-	padding: ${props => props.icon ? '0' : '5px 0'};
 	font-size: 13px;
-	width: 100%;
-	background: ${props => props.icon ? 'rgba(255,255,255,0.5)' : 'none'};
-	margin: ${props => props.icon ? '5px 0' : '0'};
-	border-radius: 35px;
+	margin: 0 5px 5px;
+	position: relative;
+	overflow: hidden;
+	padding: 5px 3px 5px 0;
+	
+	&:first-child {
+		padding-top: 0;
+	}
 	
 	> span {
-		display: ${props => props.icon ? 'flex' : 'block'};
-		flex: 1;
-		padding: ${props => props.icon ? '5px' : '0'};
+		display: flex;
+		padding: 5px;
+		position: relative;
+		z-index: 2;
 		align-items: center;
+		background-color: ${colorYellow};
+		background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+		width: 80%;
+		border: 2px solid;
+		font-size: 16px;
+		font-family: 'Kalam';
 	}
 	
 	> span:first-child {
-		font-weight: bold;
-		padding-left: ${props => props.icon ? '20px' : '0'};
+		-webkit-clip-path: polygon(0 0, 100% 0%, 87% 100%, 0% 100%);
+		clip-path: polygon(0 0, 100% 0%, 87% 100%, 0% 100%);
 	}
 	
 	> span:last-child {
 		justify-content: flex-end;
+		-webkit-clip-path: polygon(13% 0, 100% 0%, 100% 100%, 0% 100%);
+		clip-path: polygon(13% 0, 100% 0%, 100%% 100%, 0% 100%);
 	}
+`
+
+export const StatBasic = styled.div`
+	font-size: 15px;
+	width: 100%;
+	
+	> span {
+		font-family: 'Kalam';
+	}
+	
+	> span:first-child {
+		display: block;
+		font-weight: bold;
+	}
+`
+
+export const StatBackground = styled.div`
+	background: #000;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+  clip-path: polygon(0 0,100% 0%,84% 100%,0% 100%);
+  right: 98px;
+  top: 5px;
+`
+
+export const SecondStatBackground = styled.div`
+	background: #000;
+	width: 50%;
+	height: 100%;
+	position: absolute;
+	z-index: 1;
+	clip-path: polygon(16% 0,100% 0%,100% 100%,0% 100%);
+  right: -1px;
+  top: 5px;
 `
 
 export const StatImage = styled.img`
@@ -50,9 +99,4 @@ export const Value = styled.div`
 	align-items: center;
 	justify-content: center;
 	font-size: 17px;
-	border: 2px solid;
-	height: 40px;
-	width: 40px;
-	color: ${props => props.valueColour};
-	border-radius: 25px;
 `

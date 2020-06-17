@@ -1,7 +1,7 @@
 import { useState, useEffect, useContext } from 'react'
 import { useDebounce } from '@umijs/hooks';
 import { HeroContext } from 'contexts/heroContext'
-import { SearchContainer, Search, Results } from "../styled/hero-search.styled"
+import { SearchContainer, Search, Results, ResultName, ResultHeroName } from "../styled/hero-search.styled"
 
 const getHeroSearch = async (searchTerm) => {
 	const response = await fetch(`https://www.superheroapi.com/api.php/10158438646709886/search/${searchTerm}`)
@@ -40,7 +40,7 @@ export default function HeroSearch({ hero }) {
 
 	return (
 		<SearchContainer>
-			<Search autoFocus onChange={(e) => setSearchTerm(e.target.value)} placeholder="Search hero..." />
+			<Search autoFocus onChange={(e) => setSearchTerm(e.target.value)} placeholder="e.g. batman..." />
 
 			{error.length > 0 &&
 				<p>{error}</p>
@@ -51,8 +51,10 @@ export default function HeroSearch({ hero }) {
 					{results.map(result =>
 						<li>
 							<a onClick={() => setHeroInStore(result)}>
-								<strong>{result.name}</strong> <br />
-								{result.biography['full-name']}
+								<ResultName>
+									<ResultHeroName>{result.name}</ResultHeroName>
+									{result.biography['full-name']}
+								</ResultName>
 							</a>
 						</li>
 					)}

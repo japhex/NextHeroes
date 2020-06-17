@@ -6,9 +6,9 @@ export default function HeroAppearance({ appearance }) {
 
 	return (
 		<StatContainer align="left" stack>
-			<StatRow stat="Gender:" value={gender} />
-			<StatRow stat="Race:" value={race} />
-			<StatRow stat="Height:" value={height[0]} />
+			<StatRow basic stat="Gender:" value={gender} />
+			<StatRow basic stat="Race:" value={race} />
+			<StatRow basic stat="Height:" value={height[0]} />
 		</StatContainer>
 	)
 }

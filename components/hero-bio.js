@@ -5,7 +5,7 @@ export default function HeroBio({ bio, name }) {
 	return (
 			<>
 				<StatContainer align="left" stack>
-					<StatRow basic stat="Full name:" value={bio['full-name']} />
+					<StatRow basic stat="Alter egos:" value={bio['alter-egos']} />
 					<StatRow basic stat="Birthplace:" value={bio['place-of-birth']} />
 				</StatContainer>
 			</>

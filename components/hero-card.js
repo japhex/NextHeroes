@@ -10,7 +10,7 @@ export default function HeroCard({ chosenHero }) {
 	return (
 		<>
 			<CardSection>
-				<HeroImage name={name} image={image} />
+				<HeroImage name={name} image={image} fullName={biography['full-name']} />
 			</CardSection>
 			<CardSection pullUp>
 				<StatsSectionLeft>

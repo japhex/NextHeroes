@@ -47,6 +47,21 @@ export const HeroName = styled.h1`
 	transform: rotate(-5deg);
 `
 
+export const HeroRealName = styled.h1`
+	position: absolute;
+	top: 10px;
+	left: -5px;
+	z-index: 2;
+	background-color: ${colorYellow};
+	background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+	padding: 10px;
+	border: 2px solid;
+	font-family: 'comic_panelsregular';
+	font-size: 16px;
+	text-transform: uppercase;
+	transform: rotate(-2deg);
+`
+
 export const CardSection = styled.div`
 	display: flex;
 	position: relative;

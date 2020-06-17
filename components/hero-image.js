@@ -1,7 +1,7 @@
 import { Image, ImageContainer } from 'styled/hero-image.styled.js'
-import { HeroName } from "styled/battle.styled"
+import { HeroName, HeroRealName } from "styled/battle.styled"
 
-export default function HeroImage({ name, image }) {
+export default function HeroImage({ name, image, fullName }) {
 	const {url} = image
 
 	const handleImageLoad = (e) => {
@@ -15,6 +15,7 @@ export default function HeroImage({ name, image }) {
 
 	return (
 		<ImageContainer>
+			<HeroRealName>{fullName} is . . .</HeroRealName>
 			<HeroName>{name}</HeroName>
 			<Image src={url} alt={name} onError={e => handleImageError(e)} onLoad={e => handleImageLoad(e)} />
 			<noscript>

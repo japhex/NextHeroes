@@ -16,7 +16,7 @@ export const BattleVs = styled.span`
 
 export const HeroBox = styled.div`
 	border-radius: 20px; 
-	height: 78vh;
+	height: 650px;
 	width: 354px;
 	padding: 30px;
 	background-color: ${colorBrown};

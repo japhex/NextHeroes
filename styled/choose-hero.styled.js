@@ -4,11 +4,10 @@ export const Choose = styled.a`
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	height: 100%;
+	width: 100%;
 	font-size: 26px;
-	width: 60%;
-	min-height: 30vh;
+	font-family: 'Kalam';
 	text-decoration: none;
-	border: 1px dashed #cecece;
-	border-radius: 10px;
 	color: #000;
 `

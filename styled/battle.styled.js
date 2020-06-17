@@ -25,6 +25,7 @@ export const HeroBox = styled.div`
 	background-color: ${colorBrown};
 	background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 	box-shadow: -1px 0px 15px -6px rgba(0,0,0,0.75);
+	transform: ${props => props.opposite ? 'rotate(-2deg)' : 'rotate(2deg)'};
 `
 
 export const Details = styled.div`

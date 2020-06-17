@@ -10,7 +10,7 @@ export default function ChooseHero({ hero }) {
 			<HeroSearch hero={hero} />
 		:
 			<Choose href="#" onClick={() => setShowSearch(true)}>
-				+ choose hero
+				Click here to choose hero...
 			</Choose>
 	)
 }

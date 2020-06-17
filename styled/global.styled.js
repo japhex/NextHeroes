@@ -20,7 +20,7 @@ export const GlobalStyles = createGlobalStyle`
 }
 	
 	body {
-		background-color: #c9c9c9;
+		background-color: #ab504b;
 		background-image: url("https://www.transparenttextures.com/patterns/dark-brick-wall.png");
 	}
 	

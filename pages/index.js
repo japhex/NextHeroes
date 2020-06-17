@@ -24,7 +24,7 @@ export default function Battle() {
 				<BattleVsContainer>
 					<BattleVs />
 				</BattleVsContainer>
-				<HeroBox>
+				<HeroBox opposite>
 					{!isEmpty(hero2) ?
 							<>
 								<HeroCard chosenHero={hero2} />

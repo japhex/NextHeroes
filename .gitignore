@@ -17,7 +17,11 @@
 
 # misc
 .DS_Store
-.idea
+.idea/
+.idea/*
+.idea/dictionaries/J.xml
+.idea/workspace.xml
+/**/*/.idea
 
 # debug
 npm-debug.log*

@@ -20,7 +20,11 @@ const BattleVs = () => {
       <Winner onClick={() => handleWinnerClick()}>
         <WinnerCaption>
           {winner}
-          <br /> Wins!
+          {winner !== 'Draw!' && (
+            <>
+              <br /> Wins!
+            </>
+          )}
         </WinnerCaption>
       </Winner>
     )

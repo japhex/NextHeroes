@@ -6,8 +6,9 @@ import {
   Search,
   Results,
   ResultName,
-  ResultHeroName,
+  ResultHeroName
 } from 'styled/hero-search.styled'
+import { IHero } from 'interfaces/hero'
 
 interface HeroSearchProps {
   hero: number
@@ -43,7 +44,7 @@ const HeroSearch: React.FC<HeroSearchProps> = ({ hero }) => {
     }
   }, [setHeroes, setError, debouncedSearchTerm])
 
-  const setHeroInStore = (result) => {
+  const setHeroInStore = (result: IHero) => {
     if (hero === 1) {
       storeHero1(result)
     } else {
@@ -55,7 +56,7 @@ const HeroSearch: React.FC<HeroSearchProps> = ({ hero }) => {
     <SearchContainer>
       <Search
         autoFocus
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(e: any) => setSearchTerm(e.target.value)}
         placeholder="e.g. batman..."
       />
 
@@ -63,7 +64,7 @@ const HeroSearch: React.FC<HeroSearchProps> = ({ hero }) => {
 
       {heroes.length > 0 && (
         <Results>
-          {heroes.map((resultHero: Hero) => (
+          {heroes.map((resultHero: IHero) => (
             <ResultName
               key={resultHero.id}
               onClick={() => setHeroInStore(resultHero)}

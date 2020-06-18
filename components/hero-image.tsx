@@ -27,8 +27,8 @@ const HeroImage: React.FC<HeroImageProps> = ({ name, image, fullName }) => {
       <Image
         src={url}
         alt={name}
-        onError={e => handleImageError(e)}
-        onLoad={e => handleImageLoad(e)}
+        onError={(e: any) => handleImageError(e)}
+        onLoad={(e: any) => handleImageLoad(e)}
       />
       <noscript>
         <Image src={url} alt={name} />

@@ -1,6 +1,6 @@
-import { IHero, IHeroStats } from 'interfaces/hero'
+import { IHero } from 'interfaces/hero'
 
-const calculateAverage = (stats: IHeroStats) => {
+const calculateAverage = (stats: any) => {
   let statsTotal = 0
   let statsAmount = 0
 

@@ -6,6 +6,6 @@ export const ClearHeroTrigger = styled.a`
   right: 10px;
   font-weight: bold;
   font-size: 18px;
-  font-family: ${props => props.theme.fonts.heroData}';
+  font-family: ${props => props.theme.fonts.heroData};
   cursor: pointer;
 `

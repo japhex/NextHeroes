@@ -6,6 +6,10 @@ export const heroTheme = {
     blue: '#68cdf2',
     yellow: '#fef107',
     brown: '#dbc395'
+  },
+  fonts: {
+    heroName: 'Kalam',
+    heroData: 'comic_panelsregular'
   }
 }
 

@@ -45,7 +45,7 @@ export const Winner = styled.div`
 
 export const WinnerCaption = styled.div`
   max-width: 286px;
-  font-family: 'comic_panelsregular';
+  font-family: ${props => props.theme.fonts.heroData};
   text-transform: uppercase;
   text-align: center;
   font-size: 41px;

@@ -41,7 +41,7 @@ export const HeroName = styled.h1`
   background-image: url('https://www.transparenttextures.com/patterns/cardboard.png');
   padding: 10px;
   border: 2px solid;
-  font-family: 'comic_panelsregular';
+  font-family: ${props => props.theme.fonts.heroData};
   text-transform: uppercase;
   transform: rotate(-5deg);
 `
@@ -55,7 +55,7 @@ export const HeroRealName = styled.h1`
   background-image: url('https://www.transparenttextures.com/patterns/cardboard.png');
   padding: 10px;
   border: 2px solid;
-  font-family: 'comic_panelsregular';
+  font-family: ${props => props.theme.fonts.heroData};
   font-size: 16px;
   text-transform: uppercase;
   transform: rotate(-2deg);
@@ -76,12 +76,12 @@ export const StatsSectionLeft = styled.div`
   background-color: ${props => props.theme.colors.blue};
   padding: 10px;
   border: 2px solid;
-  font-family: 'Kalam';
+  font-family: ${props => props.theme.fonts.heroName};
   line-height: 12px;
   background-image: url('https://www.transparenttextures.com/patterns/cardboard.png');
 `
 
 export const StatsSectionRight = styled.div`
   width: 65%;
-  font-family: 'Kalam';
+  font-family: ${props => props.theme.fonts.heroName};
 `

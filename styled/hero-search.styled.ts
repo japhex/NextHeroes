@@ -16,7 +16,7 @@ export const ResultName = styled.li`
   padding: 10px;
   display: block;
   width: 100%;
-  font-family: 'Kalam';
+  font-family: ${props => props.theme.fonts.heroName};
   text-transform: uppercase;
 
   :hover {

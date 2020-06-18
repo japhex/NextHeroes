@@ -48,7 +48,7 @@ export const Stat = styled.div<StatProps>`
     width: 80%;
     border: 2px solid;
     font-size: 16px;
-    font-family: 'Kalam';
+    font-family: ${props => props.theme.fonts.heroName};
   }
 
   > span:first-child {
@@ -68,7 +68,7 @@ export const StatBasic = styled.div<StatProps>`
   width: 100%;
 
   > span {
-    font-family: 'Kalam';
+    font-family: ${props => props.theme.fonts.heroName};
   }
 
   > span:first-child {
@@ -116,6 +116,6 @@ export const Value = styled.div<ValueProps>`
   font-weight: bold;
   color: ${props =>
     parseInt(props.value) === 100 ? props.theme.colors.red : '#000'};
-  font-family: 'Kalam';
+  font-family: ${props => props.theme.fonts.heroName};
   padding-top: 5px;
 `

@@ -3,7 +3,7 @@ import App from 'next/app'
 import { Helmet } from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import { HeroProvider } from 'contexts/heroContext'
-import { heroTheme } from 'styled/hero-theme'
+import { heroTheme } from 'styled/themes/hero-theme'
 import { GlobalStyles } from 'styled/global.styled'
 
 class MyApp extends App {

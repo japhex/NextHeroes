@@ -7,7 +7,7 @@ export const Choose = styled.a`
   height: 100%;
   width: 100%;
   font-size: 26px;
-  font-family: 'Kalam';
+  font-family: ${props => props.theme.fonts.heroName}';
   text-decoration: none;
   color: #000;
 `

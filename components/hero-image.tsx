@@ -12,11 +12,11 @@ interface HeroImageProps {
 const HeroImage: React.FC<HeroImageProps> = ({ name, image, fullName }) => {
   const { url } = image
 
-  const handleImageLoad = (e) => {
+  const handleImageLoad = (e: any) => {
     e.target.style.visibility = 'visible'
   }
 
-  const handleImageError = (e) => {
+  const handleImageError = (e: any) => {
     e.target.onerror = null
     e.target.style.visibility = 'hidden'
   }
@@ -27,8 +27,8 @@ const HeroImage: React.FC<HeroImageProps> = ({ name, image, fullName }) => {
       <Image
         src={url}
         alt={name}
-        onError={(e) => handleImageError(e)}
-        onLoad={(e) => handleImageLoad(e)}
+        onError={e => handleImageError(e)}
+        onLoad={e => handleImageLoad(e)}
       />
       <noscript>
         <Image src={url} alt={name} />

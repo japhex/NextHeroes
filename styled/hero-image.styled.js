@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const ImageContainer = styled.div`
 	position: relative;
+	height: 472px;
+  width: 354px;
 `
 
 export const Image = styled.img`

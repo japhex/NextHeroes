@@ -12,6 +12,7 @@ export const Winner = styled.div`
 	background: url('/images/boom2.png');
 	padding: 20px;
 	animation: rotate-scale-up 0.65s linear both;
+	cursor: pointer;
   
 	@-webkit-keyframes rotate-scale-up {
 	  0% {

@@ -15,7 +15,7 @@ export default function ClearHero({ hero }) {
 
 	return (
 		<ClearHeroTrigger onClick={() => handleClearHeroClick()}>
-			CLEAR HERO X
+			NEW HERO X
 		</ClearHeroTrigger>
 	)
 }

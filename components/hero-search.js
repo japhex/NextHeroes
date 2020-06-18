@@ -34,8 +34,11 @@ export default function HeroSearch({ hero }) {
 	);
 
 	const setHeroInStore = (result) => {
-		hero === 1 ?
-			storeHero1(result) : storeHero2(result)
+		if (hero === 1) {
+			storeHero1(result)
+		} else {
+			storeHero2(result)
+		}
 	}
 
 	return (

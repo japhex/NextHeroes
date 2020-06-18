@@ -30,6 +30,8 @@
 	"prettier": {
 		"singleQuote": true,
 		"bracketSpacing": true,
-		"semi": false
+		"semi": false,
+		"arrowParens": "avoid",
+		"trailingComma": "none"
 	}
 }

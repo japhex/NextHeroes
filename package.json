@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.155",
     "@umijs/hooks": "^1.9.3",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.15",
@@ -27,11 +28,11 @@
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"
   },
-	"prettier": {
-		"singleQuote": true,
-		"bracketSpacing": true,
-		"semi": false,
-		"arrowParens": "avoid",
-		"trailingComma": "none"
-	}
+  "prettier": {
+    "singleQuote": true,
+    "bracketSpacing": true,
+    "semi": false,
+    "arrowParens": "avoid",
+    "trailingComma": "none"
+  }
 }

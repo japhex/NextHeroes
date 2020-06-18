@@ -52,11 +52,9 @@ export default function HeroSearch({ hero }) {
 			{results.length > 0 &&
 				<Results>
 					{results.map(result =>
-						<ResultName key={result.id}>
-							<a onClick={() => setHeroInStore(result)}>
+						<ResultName key={result.id} onClick={() => setHeroInStore(result)}>
 								<ResultHeroName>{result.name}</ResultHeroName>
 								{result.biography['full-name']}
-							</a>
 						</ResultName>
 					)}
 				</Results>

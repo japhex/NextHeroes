@@ -14,20 +14,20 @@ export const ResultName = styled.li`
 		cursor: pointer;
 		margin: 5px 0;
 		padding: 10px;
+		display: block;
+		width: 100%;
+		font-family: 'Kalam';
+		text-transform: uppercase;
 		
 		:hover {
 			background: rgba(255,255,255,0.8);
-		}
-		
-		a {
-			display: block;
-			width: 100%;
-			height: 100%;
 		}
 `
 
 export const ResultHeroName = styled.strong`
 	display: block;
+	font-family: 'Kalam';
+	font-size: 22px;
 `
 
 export const SearchContainer = styled.div`

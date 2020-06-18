@@ -1,7 +1,9 @@
 import React from 'react'
 import App from 'next/app'
 import { Helmet } from 'react-helmet'
+import { ThemeProvider } from 'styled-components'
 import { HeroProvider } from 'contexts/heroContext'
+import { heroTheme } from 'styled/hero-theme'
 import { GlobalStyles } from 'styled/global.styled'
 
 class MyApp extends App {
@@ -9,7 +11,6 @@ class MyApp extends App {
     const { Component, pageProps } = this.props
     return (
       <>
-        <GlobalStyles />
         <Helmet>
           <title>NextHeroes</title>
           <link
@@ -22,7 +23,10 @@ class MyApp extends App {
           />
         </Helmet>
         <HeroProvider>
-          <Component {...pageProps} />
+          <ThemeProvider theme={heroTheme}>
+            <GlobalStyles />
+            <Component {...pageProps} />
+          </ThemeProvider>
         </HeroProvider>
       </>
     )

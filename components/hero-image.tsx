@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, ImageContainer } from 'styled/hero-image.styled.js'
+import { Image, ImageContainer } from 'styled/hero-image.styled'
 import HeroNames from './hero-names'
 import { IHeroImage } from 'interfaces/hero'
 

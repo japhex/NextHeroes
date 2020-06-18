@@ -1,10 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
 
-export const colorRed = '#f01924'
-export const colorBlue = '#68cdf2'
-export const colorYellow = '#fef107'
-export const colorBrown = '#dbc395'
-
 export const GlobalStyles = createGlobalStyle`
 	* {
 		font-family: 'Roboto';

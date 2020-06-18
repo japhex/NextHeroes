@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.155",
+    "@types/styled-components": "^5.1.0",
     "@umijs/hooks": "^1.9.3",
     "gray-matter": "^4.0.2",
     "lodash": "^4.17.15",
@@ -25,6 +26,7 @@
     "@types/react": "^16.9.38",
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^6.0.0",
+    "babel-plugin-styled-components": "^1.10.7",
     "source-map-loader": "^1.0.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"

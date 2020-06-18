@@ -1,22 +1,31 @@
 import styled from 'styled-components'
-import { colorRed, colorYellow } from './global.styled'
 
-export const StatContainer = styled.div`
+interface StatContainerProps {
+  readonly multi?: boolean
+  readonly stack?: boolean
+  readonly align?: string
+}
+
+export const StatContainer = styled.div<StatContainerProps>`
   width: 100%;
-  display: ${(props) => (props.multi ? 'flex' : 'block')};
-  margin-top: ${(props) => (props.multi ? '20px' : '0')};
+  display: ${props => (props.multi ? 'flex' : 'block')};
+  margin-top: ${props => (props.multi ? '20px' : '0')};
 
   div {
-    flex-direction: ${(props) => (props.stack ? 'column' : 'none')};
-    margin-bottom: ${(props) => (props.stack ? '10px' : '0')};
+    flex-direction: ${props => (props.stack ? 'column' : 'none')};
+    margin-bottom: ${props => (props.stack ? '10px' : '0')};
 
     span {
-      text-align: ${(props) => (props.align === 'left' ? 'left' : 'center')};
+      text-align: ${props => (props.align === 'left' ? 'left' : 'center')};
     }
   }
 `
 
-export const Stat = styled.div`
+interface StatProps {
+  readonly icon?: boolean
+}
+
+export const Stat = styled.div<StatProps>`
   display: flex;
   font-size: 13px;
   margin: 0 5px 5px;
@@ -34,7 +43,7 @@ export const Stat = styled.div`
     position: relative;
     z-index: 2;
     align-items: center;
-    background-color: ${colorYellow};
+    background-color: ${props => props.theme.colors.yellow};
     background-image: url('https://www.transparenttextures.com/patterns/cardboard.png');
     width: 80%;
     border: 2px solid;
@@ -54,7 +63,7 @@ export const Stat = styled.div`
   }
 `
 
-export const StatBasic = styled.div`
+export const StatBasic = styled.div<StatProps>`
   font-size: 15px;
   width: 100%;
 
@@ -94,14 +103,19 @@ export const StatImage = styled.img`
   height: 40px;
 `
 
-export const Value = styled.div`
+interface ValueProps {
+  readonly value?: string
+}
+
+export const Value = styled.div<ValueProps>`
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 18px;
   line-height: 16px;
   font-weight: bold;
-  color: ${(props) => (parseInt(props.value) === 100 ? colorRed : '#000')};
+  color: ${props =>
+    parseInt(props.value) === 100 ? props.theme.colors.red : '#000'};
   font-family: 'Kalam';
   padding-top: 5px;
 `

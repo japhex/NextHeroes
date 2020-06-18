@@ -29,9 +29,9 @@ const HeroSearch: React.FC<HeroSearchProps> = ({ hero }) => {
 
   useEffect(() => {
     if (debouncedSearchTerm) {
-      getHeroSearch(debouncedSearchTerm).then(({ heroes, error }) => {
-        if (heroes) {
-          setHeroes(heroes)
+      getHeroSearch(debouncedSearchTerm).then(({ results, error }) => {
+        if (results) {
+          setHeroes(results)
           setError('')
         } else {
           setError(error)
@@ -41,7 +41,7 @@ const HeroSearch: React.FC<HeroSearchProps> = ({ hero }) => {
     } else {
       setHeroes([])
     }
-  }, [debouncedSearchTerm])
+  }, [setHeroes, setError, debouncedSearchTerm])
 
   const setHeroInStore = (result) => {
     if (hero === 1) {
